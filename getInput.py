@@ -46,6 +46,35 @@ def getNumber(prompt, minNumber, maxNumber):
             
     return word
 
+
+
+def getPhone (prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if isPhone(word):
+            goodInput = True
+        else:
+            print "Not a phone, yet..."
+    return word
+
+
+
+def isPhone(word):
+    phoneList = [ "Android",
+                "Smasung",
+                "Apple",
+                "LG",
+                "Google",
+                "One Plus",
+                ]
+    if word in phoneList:
+        return True
+    else:
+        return False
+
+
+
 def isSwear(word):
     swearList = ["crap",
                 "piss",
