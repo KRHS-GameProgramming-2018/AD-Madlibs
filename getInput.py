@@ -61,18 +61,31 @@ def getPhone (prompt):
 
 
 def isPhone(word):
-    phoneList = [ "Android",
-                "Samsung",
-                "Apple",
-                "LG",
-                "Google",
-                "One Plus",
+    phoneList = [ "android",
+                "samsung",
+                "apple",
+                "lg",
+                "google",
+                "one plus",
                 ]
-    if word in phoneList:
+    if word.lower() in phoneList:
         return True
     else:
         return False
+        
+        
 
+
+def getMountain (prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if MountainList(word):
+        
+
+
+
+def MountainList (word):
 
 
 def isSwear(word):
@@ -91,7 +104,7 @@ def isSwear(word):
                 "vagina",
                 "penis",
                 ]
-    if word in swearList:
+    if word.lower() in swearList:
         return True
     else:
         return False
