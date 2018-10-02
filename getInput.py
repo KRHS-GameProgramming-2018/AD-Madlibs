@@ -62,7 +62,7 @@ def getPhone (prompt):
 
 def isPhone(word):
     phoneList = [ "Android",
-                "Smasung",
+                "Samsung",
                 "Apple",
                 "LG",
                 "Google",
