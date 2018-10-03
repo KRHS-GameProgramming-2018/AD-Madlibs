@@ -67,6 +67,8 @@ def isPhone(word):
                 "lg",
                 "google",
                 "one plus",
+                "galaxy",
+                "note",
                 ]
     if word.lower() in phoneList:
         return True
@@ -76,16 +78,61 @@ def isPhone(word):
         
 
 
-def getMountain (prompt):
+def getMountain(prompt):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        if MountainList(word):
-        
+        if isMountain(word):
+            goodInput = True
+        else:
+            print "please enter the name of a mountain "
+    return word                
 
 
 
-def MountainList (word):
+def isMountain(word):
+    MountainList = [ "kearsarge",
+                    "sunapee",
+                    "cannon",
+                    "washington",
+    ]
+    if word.lower() in MountainList:
+        return True
+    else:
+        return False
+
+def getDay(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if isDay(word):
+            goodInput = True
+        else:
+            print "Please enter a day of the week "
+        return word
+    
+
+
+
+def isDay(word):
+    dayList = [ "monday", 
+               "tuesday",
+               "wednesday",
+               "thursday",
+               "friday",
+               "saturday",
+               "sunday",
+               ]
+    if word.lower() in dayList:
+        return True
+    else:
+        return False
+               
+    
+
+
+
+
 
 
 def isSwear(word):
@@ -93,8 +140,11 @@ def isSwear(word):
                 "piss",
                 "shit",
                 "bitch",
+                "bitchy",
                 "bastard",
                 "fuck",
+                "fucked",
+                "fucker",
                 "nigger",
                 "nigga",
                 "negro",
