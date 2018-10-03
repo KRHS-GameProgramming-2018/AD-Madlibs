@@ -70,10 +70,11 @@ def isPhone(word):
                 "galaxy",
                 "note",
                 ]
-    if word.lower() in phoneList:
-        return True
-    else:
-        return False
+    words = word.split(" ")
+    for w in words:
+        if w.lower() not in phoneList:
+            return False
+    return True
         
         
 
