@@ -55,14 +55,16 @@ def getPhone (prompt):
         if isPhone(word):
             goodInput = True
         else:
-            print "Not a phone, yet..."
+            print "Haven't heard of that one"
     return word
 
 
 
 def isPhone(word):
+    nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     phoneList = [ "android",
                 "samsung",
+                "iphone",
                 "iphone",
                 "lg",
                 "google",
@@ -70,11 +72,13 @@ def isPhone(word):
                 "galaxy",
                 "note",
                 "motorola",
-                
+                "nokia",
+                "s",
+                "x"
                 ]
     words = word.split(" ")
     for w in words:
-        if w.lower() not in phoneList:
+        if (w.lower() not in phoneList) and (w not in nums):
             return False
     return True
         
@@ -88,7 +92,7 @@ def getMountain(prompt):
         if isMountain(word):
             goodInput = True
         else:
-            print "please enter the name of a mountain "
+            print "Mountain not recognised "
     return word                
 
 
@@ -98,6 +102,7 @@ def isMountain(word):
                     "sunapee",
                     "cannon",
                     "washington",
+                    "jefferson",
     ]
     if word.lower() in MountainList:
         return True
