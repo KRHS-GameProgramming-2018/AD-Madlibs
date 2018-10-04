@@ -63,12 +63,14 @@ def getPhone (prompt):
 def isPhone(word):
     phoneList = [ "android",
                 "samsung",
-                "apple",
+                "iphone",
                 "lg",
                 "google",
                 "one plus",
                 "galaxy",
                 "note",
+                "motorola",
+                
                 ]
     words = word.split(" ")
     for w in words:
