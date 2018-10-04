@@ -144,6 +144,11 @@ def isSwear(word):
                 "bitchy",
                 "bastard",
                 "fuck",
+                "fuc",
+                "fuq",
+                "phuck",
+                "phuc",
+                "phuq",
                 "fucked",
                 "fucker",
                 "nigger",
@@ -157,6 +162,6 @@ def isSwear(word):
                 ]
     words = word.split(" ")
     for w in words:
-        if w.lower() not in swearList:
+        if w.lower() in swearList:
             return True
     return False
