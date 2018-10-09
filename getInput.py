@@ -118,7 +118,7 @@ def getDay(prompt):
         else:
             print "Please enter a day of the week "
         return word
-    
+
 
 
 
@@ -172,3 +172,31 @@ def isSwear(word):
         if w.lower() in swearList:
             return True
     return False
+
+
+
+def unitsOfMeasure
+    goodInput = False
+    while not goodInput:
+        word = raw_input (prompt)
+        if isMeasure(word):
+            goodInput = True
+        else:
+            print "Please enter a unit of measure "
+        return word
+
+
+def isMeasure(word):
+    measureList = ["pounds",
+                   "lbs",
+                   "ounces",
+                   "oz",
+                   "pints",
+                   "liters",
+                   "milliliters",
+                   "kiloliters",
+                   "gallons",
+                   "cups",
+    if word.lower() in measureList:
+        return False
+    return True
