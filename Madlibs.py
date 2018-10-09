@@ -1,6 +1,8 @@
 from screens import *
 from getInput import *
 import story1
+import story2
+
 
 print showSplash()
 raw_input("Press Enter to Start")
@@ -16,7 +18,7 @@ while go:
         print story1.playMadlibs()
         raw_input("Press Enter to Continue")
     elif response == "2":
-        print story2.playMadlibs
+        print story2.playMadlibs()
         raw_input("Press Enter to Continue")
     else:
         print "OMG Got invalid menu option!!!"

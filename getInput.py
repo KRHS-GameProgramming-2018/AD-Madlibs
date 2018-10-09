@@ -6,6 +6,10 @@ def getMenuInput():
             or response == "One"):
             response = "1"
             goodInput = True
+        elif (response == "2" 
+            or response == "Two"):
+            response = "2"
+            goodInput = True
         elif (response == "Q"
               or response == "Quit"
               or response == "q"
@@ -175,10 +179,11 @@ def isSwear(word):
 
 
 
-def unitsOfMeasure
+def getMeasure(prompt):
     goodInput = False
     while not goodInput:
-        word = raw_input (prompt)
+        word = raw_input(prompt)
+        goodInput = False
         if isMeasure(word):
             goodInput = True
         else:
@@ -197,6 +202,8 @@ def isMeasure(word):
                    "kiloliters",
                    "gallons",
                    "cups",
+                   ]
     if word.lower() in measureList:
+        return True
+    else:
         return False
-    return True
