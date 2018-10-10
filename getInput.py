@@ -183,7 +183,6 @@ def getMeasure(prompt):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        goodInput = False
         if isMeasure(word):
             goodInput = True
         else:
