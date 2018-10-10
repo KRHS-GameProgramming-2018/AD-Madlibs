@@ -179,6 +179,12 @@ def isSwear(word):
 
 
 
+
+
+
+
+
+
 def getMeasure(prompt):
     goodInput = False
     while not goodInput:
@@ -205,4 +211,47 @@ def isMeasure(word):
     if word.lower() in measureList:
         return True
     else:
-        return False
+        return False        
+
+
+
+
+def getNumber1(prompt, minNumber, maxNumber):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt+" (Between " + str(minNumber) +  " and " + str(maxNumber) + ") ")
+        nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",]
+        goodInput = True
+        for character in word:
+            if character not in nums:
+                print "not a number"
+                goodInput = False
+                break
+        if goodInput and (int(word) < minNumber or int(word) > maxNumber):
+            goodInput = False
+            print "Out of Range"
+        
+            
+    return word
+
+
+def getWord2(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if not isSwear(word):
+            goodInput = True
+        else:
+            print "Watch your language!"
+    return word
+
+
+def getSize(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if not isSwear(word):
+            goodInput = True
+        else:
+            print "Watch your language!"
+    return word
