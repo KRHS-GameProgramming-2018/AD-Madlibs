@@ -10,6 +10,10 @@ def getMenuInput():
             or response == "Two"):
             response = "2"
             goodInput = True
+        elif (response == "3" 
+            or response == "three"):
+            response = "3"
+            goodInput = True
         elif (response == "Q"
               or response == "Quit"
               or response == "q"
@@ -278,11 +282,32 @@ def isCarCompany(word):
                     "pagani",
                     "bugatti",
                     "aston martin",
+                    "aston",
                     "jaguar",
                     "jag",
                     "honda",
                     "subaru",
                     "mitsubishi",
+                    "acura",
+                    "toyota",
+                    "bentley",
+                    "plymouth"
+                    "oldsmobile",
+                    "chrystler",
+                    "pontiac",
+                    "porsche",
+                    "vw",
+                    "volkswagen",
+                    "mercedes",
+                    "lexus",
+                    "hyundai",
+                    "ferrari",
+                    "lamborghini",
+                    "lambo",
+                    "saab",
+                    "volvo",
+                    "gmc",
+                    "fiat",
                     ]
     if word.lower() in carCompanyList:
         return True
