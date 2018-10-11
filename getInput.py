@@ -255,3 +255,36 @@ def getSize(prompt):
         else:
             print "Watch your language!"
     return word
+
+
+def getCarCompany(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if isCarCompany(word):
+            goodInput = True
+        else:
+            print "Never heard of that car company"
+    return word
+    
+
+def isCarCompany(word):
+    carCompanyList = ["mini",
+                    "dodge",
+                    "ford",
+                    "chevy",
+                    "chevrolet",
+                    "nissan",
+                    "pagani",
+                    "bugatti",
+                    "aston martin",
+                    "jaguar",
+                    "jag",
+                    "honda",
+                    "subaru",
+                    "mitsubishi",
+                    ]
+    if word.lower() in carCompanyList:
+        return True
+    else:
+        return False  
