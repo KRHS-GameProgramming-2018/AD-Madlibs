@@ -247,6 +247,47 @@ def getWord2(prompt):
     return word
 
 
+def getFruit(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if isFruit(word):
+            goodInput = True
+        else:
+            print "Please enter a fruit "
+    return word
+
+
+def isFruit(word):
+    fruitList = [ "strawberry", 
+               "grape",
+               "banana",
+               "apple",
+               "orange",
+               "blueberry",
+               "cherry",
+               "peach",
+               "cranberry",
+               ]
+    if word.lower() in fruitList:
+        return True
+    else:
+        return False
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def getSize(prompt):
     goodInput = False
     while not goodInput:

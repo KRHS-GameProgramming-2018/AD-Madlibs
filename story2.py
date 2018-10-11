@@ -4,10 +4,10 @@ def playMadlibs():
  number1 = getNumber1 ("pick a number ", 0, 10)
  color = getWord2 ("choose a color ")
  unitsOfMeasure = getMeasure ("enter a unit of measurement ") 
- number2 = getNumber ("pick another number ", 0, 10)
+ number2 = getNumber1 ("pick another number ", 0, 10)
  verb = getWord ("enter a verb ")
  size = getSize ("choose a size ie: large, small, huge, tiny: ")
- fruit = getWord ("choose a fruit ")
+ fruit = getFruit ("choose a fruit ")
  pancakeside = getWord ("name a pancake toping ")
 
 
