@@ -54,7 +54,8 @@ def getNumber(prompt, minNumber, maxNumber):
             
     return word
 
-
+#counter = 0
+#counter += 1
 
 def getPhone (prompt):
     goodInput = False
