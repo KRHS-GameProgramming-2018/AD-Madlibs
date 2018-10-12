@@ -60,6 +60,7 @@ def getPhone (prompt):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
+    
         if isPhone(word):
             goodInput = True
         else:
