@@ -10,6 +10,10 @@ def getMenuInput():
             or response == "Two"):
             response = "2"
             goodInput = True
+        elif (response == "3" 
+            or response == "three"):
+            response = "3"
+            goodInput = True
         elif (response == "Q"
               or response == "Quit"
               or response == "q"
@@ -189,7 +193,6 @@ def getMeasure(prompt):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        goodInput = False
         if isMeasure(word):
             goodInput = True
         else:
@@ -297,3 +300,57 @@ def getSize(prompt):
         else:
             print "Watch your language!"
     return word
+
+
+def getCarCompany(prompt):
+    goodInput = False
+    while not goodInput:
+        word = raw_input(prompt)
+        if isCarCompany(word):
+            goodInput = True
+        else:
+            print "Never heard of that car company"
+    return word
+    
+
+def isCarCompany(word):
+    carCompanyList = ["mini",
+                    "dodge",
+                    "ford",
+                    "chevy",
+                    "chevrolet",
+                    "nissan",
+                    "pagani",
+                    "bugatti",
+                    "aston martin",
+                    "aston",
+                    "jaguar",
+                    "jag",
+                    "honda",
+                    "subaru",
+                    "mitsubishi",
+                    "acura",
+                    "toyota",
+                    "bentley",
+                    "plymouth"
+                    "oldsmobile",
+                    "chrystler",
+                    "pontiac",
+                    "porsche",
+                    "vw",
+                    "volkswagen",
+                    "mercedes",
+                    "lexus",
+                    "hyundai",
+                    "ferrari",
+                    "lamborghini",
+                    "lambo",
+                    "saab",
+                    "volvo",
+                    "gmc",
+                    "fiat",
+                    ]
+    if word.lower() in carCompanyList:
+        return True
+    else:
+        return False  
