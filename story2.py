@@ -8,7 +8,7 @@ def playMadlibs():
  verb = getWord ("enter a verb ")
  size = getSize ("choose a size ie: large, small, huge, tiny: ")
  fruit = getFruit ("choose a fruit ")
- pancakeside = getWord ("name a pancake toping ")
+ pancakeside = getWord ("name a pancake topping ")
 
 
 
