@@ -25,9 +25,11 @@ def getMenuInput():
         else:
             print "Please make a valid choice"
     return response
-    
+
+
+
+
 def getWord(prompt):
-    counter = 0
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
@@ -38,7 +40,10 @@ def getWord(prompt):
             print "Watch your language!"
             
     return word
-    
+
+
+
+
 def getNumber(prompt, minNumber, maxNumber):
     goodInput = False
     while not goodInput:
@@ -70,6 +75,7 @@ def getPhone (prompt):
         else:
             print "Haven't heard of that one"
     return word
+
 
 
 
@@ -110,6 +116,7 @@ def getMountain(prompt):
 
 
 
+
 def isMountain(word):
     MountainList = [ "kearsarge",
                     "sunapee",
@@ -121,6 +128,10 @@ def isMountain(word):
         return True
     else:
         return False
+
+
+
+
 
 def getDay(prompt):
     goodInput = False
@@ -150,10 +161,6 @@ def isDay(word):
         return False
                
     
-
-
-
-
 
 
 def isSwear(word):
@@ -189,11 +196,6 @@ def isSwear(word):
 
 
 
-
-
-
-
-
 def getMeasure(prompt):
     goodInput = False
     while not goodInput:
@@ -203,6 +205,8 @@ def getMeasure(prompt):
         else:
             print "Please enter a unit of measure "
         return word
+
+
 
 
 def isMeasure(word):
@@ -244,6 +248,8 @@ def getNumber1(prompt, minNumber, maxNumber):
     return word
 
 
+
+
 def getWord2(prompt):
     goodInput = False
     while not goodInput:
@@ -255,6 +261,8 @@ def getWord2(prompt):
     return word
 
 
+
+
 def getFruit(prompt):
     goodInput = False
     while not goodInput:
@@ -264,6 +272,8 @@ def getFruit(prompt):
         else:
             print "Please enter a fruit "
     return word
+
+
 
 
 def isFruit(word):
@@ -285,17 +295,6 @@ def isFruit(word):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 def getSize(prompt):
     goodInput = False
     while not goodInput:
@@ -307,6 +306,8 @@ def getSize(prompt):
     return word
 
 
+
+
 def getCarCompany(prompt):
     goodInput = False
     while not goodInput:
@@ -316,27 +317,30 @@ def getCarCompany(prompt):
         else:
             print "Never heard of that car company"
     return word
+
+
     
 
 def isCarCompany(word):
-    carCompanyList = ["mini",
+    carCompanyList = ["acura",
+                    "aston",
+                    "aston martin",
+                    "audi",
+                    "bentley",
+                    "bugatti",
+                    "mini",
                     "dodge",
                     "ford",
                     "chevy",
                     "chevrolet",
                     "nissan",
                     "pagani",
-                    "bugatti",
-                    "aston martin",
-                    "aston",
                     "jaguar",
                     "jag",
                     "honda",
                     "subaru",
                     "mitsubishi",
-                    "acura",
                     "toyota",
-                    "bentley",
                     "plymouth"
                     "oldsmobile",
                     "chrystler",
