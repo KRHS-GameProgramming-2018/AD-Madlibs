@@ -1,3 +1,4 @@
+
 def getMenuInput():
     goodInput = False
     while not goodInput:
@@ -29,15 +30,17 @@ def getMenuInput():
 
 
 
-def getWord(prompt):
+def getWord(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
         if not isSwear(word):
             goodInput = True
-            counter += 1
         else:
             print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
             
     return word
 
@@ -62,8 +65,8 @@ def getNumber(prompt, minNumber, maxNumber):
             
     return word
 
-counter = 0
-counter += 1
+
+
 
 def getPhone (prompt):
     goodInput = False

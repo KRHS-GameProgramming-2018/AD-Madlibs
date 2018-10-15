@@ -1,3 +1,4 @@
+
 def showSplash():
     output = ""
     output += "---------------------------------------\n"
@@ -7,7 +8,7 @@ def showSplash():
     output += "|           Aaron & Derek             |\n"
     output += "|                                     |\n"
     output += "---------------------------------------\n"
-
+    
     
     return output
     
@@ -18,8 +19,13 @@ def showMenu():
     output += "|   1) A Story by Spooner             |\n"
     output += "|   2) A story by Derek               |\n"
     output += "|   3) A story by Aaron (In Progress) |\n"
+    output += "|   4) testing counter                |\n"
     output += "|   Q) Quit                           |\n"
     output += "---------------------------------------\n"
 
     
     return output
+
+def showLockScreen():
+    output = ""
+    output += "---------------------------------------\n"

@@ -1,7 +1,7 @@
 from getInput import *
 
-def playMadlibs():
-    friend1 = getWord("Enter a Name: ")
+def playMadlibs(sc):
+    friend1 = getWord("Enter a Name: ", sc)
     numAnimals = getNumber("Enter a number: ", 2, 10)
     animals1 = getWord("Enter a pluaral animal name: ")
     color1 = getWord("Enter a color: ")
