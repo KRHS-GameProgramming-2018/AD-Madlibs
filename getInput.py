@@ -47,14 +47,20 @@ def getWord(prompt, sc = None):
 
 
 
-def getNumber(prompt, minNumber, maxNumber):
+def getNumber(prompt, minNumber, maxNumber, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt+" (Between " + str(minNumber) +  " and " + str(maxNumber) + ") ")
         nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         goodInput = True
         for character in word:
-            if character not in nums:
+            if isSwear (word):
+                goodInput = False
+                print "Watch your language!"
+                if sc:
+                    sc[0] += 1
+                    print sc[0]
+            elif character not in nums:
                 print "not a number"
                 goodInput = False
                 break
@@ -68,14 +74,19 @@ def getNumber(prompt, minNumber, maxNumber):
 
 
 
-def getPhone (prompt):
+def getPhone (prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-    
+        if isSwear (word):
+            goodInput = False
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         if isPhone(word):
             goodInput = True
-        else:
+        elif not isSwear (word):
             print "Haven't heard of that one"
     return word
 
@@ -107,10 +118,16 @@ def isPhone(word):
         
 
 
-def getMountain(prompt):
+def getMountain(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
+        if isSwear (word):
+            goodInput = False
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         if isMountain(word):
             goodInput = True
         else:
@@ -136,10 +153,16 @@ def isMountain(word):
 
 
 
-def getDay(prompt):
+def getDay(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
+        if isSwear (word):
+            goodInput = False
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         if isDay(word):
             goodInput = True
         else:
@@ -311,13 +334,19 @@ def getSize(prompt):
 
 
 
-def getCarCompany(prompt):
+def getCarCompany(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
+        if isSwear (word):
+            goodInput = False
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         if isCarCompany(word):
             goodInput = True
-        else:
+        elif not isSwear:
             print "Never heard of that car company"
     return word
 
