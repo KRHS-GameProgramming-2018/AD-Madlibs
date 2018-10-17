@@ -24,7 +24,7 @@ while go:
         print story2.playMadlibs(swearCount)
         raw_input("Press Enter to Continue")
     elif response == "3":
-        print story3.playMadlibs()
+        print story3.playMadlibs(swearCount)
         raw_input("Press Enter to Continue")
     elif response == "4":
         print Counter.playMadlibs()

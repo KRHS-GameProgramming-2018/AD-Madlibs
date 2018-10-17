@@ -52,22 +52,15 @@ def getNumber(prompt, minNumber, maxNumber, sc = None):
     while not goodInput:
         word = raw_input(prompt+" (Between " + str(minNumber) +  " and " + str(maxNumber) + ") ")
         nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        if not isSwear(word):
-            goodInput = True
-        else:
+        if isSwear(word):
+            goodInput = False
             print "Watch your language!"
             if sc:
                 sc[0] += 1
                 print sc[0]
         goodInput = True
         for character in word:
-            if isSwear (word):
-                goodInput = False
-                print "Watch your language!"
-                if sc:
-                    sc[0] += 1
-                    print sc[0]
-            elif character not in nums:
+            if character not in nums:
                 print "not a number"
                 goodInput = False
                 break
@@ -137,7 +130,7 @@ def getMountain(prompt, sc = None):
                 print sc[0]
         if isMountain(word):
             goodInput = True
-        else:
+        elif not isSwear(word):
             print "Mountain not recognised "
     return word                
 
@@ -233,18 +226,17 @@ def getMeasure(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        if not isSwear(word):
-            goodInput = True
-        else:
+        if isSwear(word):
+            goodInput = False
             print "Watch your language!"
             if sc:
                 sc[0] += 1
                 print sc[0]
-        if  not isMeasure(word):
+        if isMeasure(word):
+            goodInput = True
+        elif not isSwear (word):
             print " please enter a unit of measurement"
             goodInput = False
-        elif isMeasure:
-            goodInput = True
     return word
 
 
