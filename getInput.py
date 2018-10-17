@@ -47,11 +47,18 @@ def getWord(prompt, sc = None):
 
 
 
-def getNumber(prompt, minNumber, maxNumber):
+def getNumber(prompt, minNumber, maxNumber, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt+" (Between " + str(minNumber) +  " and " + str(maxNumber) + ") ")
         nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        if not isSwear(word):
+            goodInput = True
+        else:
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         goodInput = True
         for character in word:
             if character not in nums:
@@ -199,15 +206,23 @@ def isSwear(word):
 
 
 
-def getMeasure(prompt):
+def getMeasure(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        if isMeasure(word):
+        if not isSwear(word):
             goodInput = True
         else:
-            print "Please enter a unit of measure "
-        return word
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
+        if  not isMeasure(word):
+            print " please enter a unit of measurement"
+            goodInput = False
+        elif isMeasure:
+            goodInput = True
+    return word
 
 
 
@@ -232,11 +247,18 @@ def isMeasure(word):
 
 
 
-def getNumber1(prompt, minNumber, maxNumber):
+def getNumber1(prompt, minNumber, maxNumber, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt+" (Between " + str(minNumber) +  " and " + str(maxNumber) + ") ")
         nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",]
+        if not isSwear(word):
+            goodInput = True
+        else:
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
         goodInput = True
         for character in word:
             if character not in nums:
@@ -253,7 +275,7 @@ def getNumber1(prompt, minNumber, maxNumber):
 
 
 
-def getWord2(prompt):
+def getWord2(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
@@ -261,18 +283,29 @@ def getWord2(prompt):
             goodInput = True
         else:
             print "Watch your language!"
+            if sc: 
+                sc[0] += 1
+                print sc[0]
+    
     return word
 
 
 
 
-def getFruit(prompt):
+def getFruit(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
-        if isFruit(word):
+        if not isSwear(word):
             goodInput = True
         else:
+            print "Watch your language!"
+            if sc:
+                sc[0] += 1
+                print sc[0]
+        if isFruit(word):
+            goodInput = True
+        elif isSwear:
             print "Please enter a fruit "
     return word
 
@@ -298,7 +331,7 @@ def isFruit(word):
 
 
 
-def getSize(prompt):
+def getSize(prompt, sc = None):
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
@@ -306,6 +339,9 @@ def getSize(prompt):
             goodInput = True
         else:
             print "Watch your language!"
+            if sc: 
+                sc[0] += 1
+                print sc[0]
     return word
 
 

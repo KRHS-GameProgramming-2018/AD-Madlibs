@@ -1,14 +1,14 @@
 from getInput import *
 
-def playMadlibs():
- number1 = getNumber1 ("pick a number ", 0, 10)
- color = getWord2 ("choose a color ")
- unitsOfMeasure = getMeasure ("enter a unit of measurement ") 
- number2 = getNumber ("pick another number ", 0, 10)
- adverb = getWord ("enter a verb ")
- size = getSize ("choose a size ie: large, small, huge, tiny: ")
- fruit = getWord ("choose a fruit ")
- pancakeTopping = getWord ("name a pancake toping ")
+def playMadlibs(sc):
+ number1 = getNumber1 ("pick a number ", 0, 10, sc)
+ color = getWord2 ("choose a color ", sc)
+ unitsOfMeasure = getMeasure ("enter a unit of measurement ", sc) 
+ number2 = getNumber ("pick another number ", 0, 10, sc)
+ adverb = getWord ("enter a verb ", sc)
+ size = getSize ("choose a size ie: large, small, huge, tiny: ", sc)
+ fruit = getWord ("choose a fruit ", sc)
+ pancakeTopping = getWord ("name a pancake toping ", sc)
 
 
 
