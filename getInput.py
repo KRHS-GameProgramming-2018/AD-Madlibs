@@ -326,9 +326,10 @@ def getFruit(prompt, sc = None):
             if sc:
                 sc[0] += 1
                 print sc[0]
-        if isFruit(word):
+        if isFruit (word):
             goodInput = True
-        elif isSwear:
+        else:
+            goodInput = False
             print "Please enter a fruit "
     return word
 
