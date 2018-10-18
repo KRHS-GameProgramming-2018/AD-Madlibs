@@ -1,6 +1,6 @@
 from getInput import *
 
-def playMadlibs():
+def playMadlibs(sc):
     
     adjective = getWord ("Please enter an adjective: ")
     name1 = getWord ("please enter a name: ")
