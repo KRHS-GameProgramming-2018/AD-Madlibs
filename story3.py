@@ -2,13 +2,13 @@ from getInput import *
 
 def playMadlibs(sc):
     
-    adjective = getWord ("Please enter an adjective: ")
-    name1 = getWord ("please enter a name: ")
-    carCompany = getCarCompany ("Please enter a car company: ")
-    speed = getNumber ("Please enter a number: ", 60, 250)
-    verb = getWord ("Please enter a verb: ")
-    animal = getWord ("Please enter a plural animal: ")
-    verb2 = getWord ("Please enter another verb: ")
+    adjective = getWord ("Please enter an adjective: ", sc)
+    name1 = getWord ("please enter a name: ", sc)
+    carCompany = getCarCompany ("Please enter a car company: ", sc)
+    speed = getNumber ("Please enter a number: ", 60, 250, sc)
+    verb = getWord ("Please enter a verb: ", sc)
+    animal = getWord ("Please enter a plural animal: ", sc)
+    verb2 = getWord ("Please enter another verb: ", sc)
     
     
     output = ""
