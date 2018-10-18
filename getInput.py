@@ -41,7 +41,6 @@ def getWord(prompt, sc = None):
             if sc:
                 sc[0] += 1
                 print sc[0]
-            
     return word
 
 

@@ -2,12 +2,12 @@ from getInput import *
 
 def playMadlibs(sc):
     friend1 = getWord("Enter a Name: ", sc)
-    numAnimals = getNumber("Enter a number: ", 2, 10)
-    animals1 = getWord("Enter a pluaral animal name: ")
-    color1 = getWord("Enter a color: ")
-    phone = getPhone("Enter phone: ")
-    mountainInNH = getMountain ("Enter the name of a mountain in NH: ")
-    day =  getDay ("Name a day of the week: ")
+    numAnimals = getNumber("Enter a number: ", 2, 10, sc)
+    animals1 = getWord("Enter a pluaral animal name: ", sc)
+    color1 = getWord("Enter a color: ", sc)
+    phone = getPhone("Enter phone: ", sc)
+    mountainInNH = getMountain ("Enter the name of a mountain in NH: ", sc)
+    day =  getDay ("Name a day of the week: ", sc)
     
     output = ""
     output += "One day I was walking with my friend, " + friend1
