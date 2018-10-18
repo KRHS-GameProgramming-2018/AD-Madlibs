@@ -12,8 +12,8 @@ swearCount = [0];
 
 go = True
 while go:
-    if swearCount[0] == 3:
-        print showLockScreen
+    if swearCount[0] >= 3:
+        print showLockScreen()
     else:
         print showMenu()
         response = getMenuInput()
