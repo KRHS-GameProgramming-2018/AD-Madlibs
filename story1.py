@@ -1,5 +1,6 @@
 from getInput import *
 from Madlibs import *
+
 def playMadlibs(sc):
     friend1 = getWord("Enter a Name: ", sc)
     numAnimals = getNumber("Enter a number: ", 2, 10, sc)
@@ -21,9 +22,9 @@ def playMadlibs(sc):
     output += " No, he responded. I took out my phone to show him the photo, to my suprise, the photo was deleted."
     output += " To this day, I was never sure if I had seen those wierd animals on that " + day + " afternoon. "
     
-if sc [0] == 3:
-         print showLockScreen
-    
-    
-    
-    return output
+    if sc [0] >= 3:
+        print showLockScreen
+        
+        
+        
+        return output
