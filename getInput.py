@@ -40,7 +40,7 @@ def getWord(prompt, sc = None):
             print "Watch your language!"
             if sc:
                 sc[0] += 1
-                print sc[0]
+                print sc[0] # Probably should turn this off once it works...or make it a message about how close they are to being in trouble
     return word
 
 
@@ -85,7 +85,7 @@ def getPhone (prompt, sc = None):
                 print sc[0]
         if isPhone(word):
             goodInput = True
-        elif not isSwear (word):
+        elif not isSwear (word): # This is a little redundant; you could have just used else
             print "Haven't heard of that one"
     return word
 
@@ -292,7 +292,7 @@ def getNumber1(prompt, minNumber, maxNumber, sc = None):
 
 
 
-def getWord2(prompt, sc = None):
+def getWord2(prompt, sc = None): # how is this different then getWord
     goodInput = False
     while not goodInput:
         word = raw_input(prompt)
